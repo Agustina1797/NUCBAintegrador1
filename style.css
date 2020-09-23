@@ -32,7 +32,7 @@ li a:hover {
 }
 
 .logo {
-    height: 32px;
+    width: 32px;
 }
 
 .portada {
@@ -479,8 +479,13 @@ footer {
     color: white;
 }
 
-.containerRegistro p,
-img {
+.containerRegistro p {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containerRegistro img {
     width: 350px;
     margin-left: auto;
     margin-right: auto;
