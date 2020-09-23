@@ -497,7 +497,16 @@ footer {
     border-radius: 20px;
 }
 
-.containerRegistro,
+.containerRegistro button {
+    width: 100%;
+    background-color: #7bc74d;
+    color: #f2f2f2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+}
+
 .containerLog button {
     width: 100%;
     background-color: #7bc74d;
@@ -508,7 +517,10 @@ footer {
     padding: 10px;
 }
 
-.containerRegistro,
+.containerRegistro button:hover {
+    background-color: #44851d;
+}
+
 .containerLog button:hover {
     background-color: #44851d;
 }
@@ -625,11 +637,15 @@ footer {
         padding: 10px;
         width: 80%;
     }
-    .containerRegistro,
+    .containerRegistro {
+        width: 100%;
+    }
     .containerLog {
         width: 100%;
     }
-    .containerRegistro,
+    .containerRegistro img {
+        width: 80%;
+    }
     .containerLog img {
         width: 80%;
     }
