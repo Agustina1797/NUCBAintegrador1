@@ -474,47 +474,103 @@ footer {
 /* REGISTRO */
 
 .containerRegistro {
-    background-image: url(images/fondoreg4.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.containerImage {
+    background-image: url(images/registro.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    float: left;
+    width: 50%;
     height: 100vh;
-    position: relative;
+}
+
+.contReg {
+    background-color: #f2f2f2;
+    width: 50%;
+    float: left;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.containerInputs {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 3px 4px 6px 0px rgba(148, 148, 148, 1);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.inputsReg p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #838383;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.inputsReg p a {
+    text-decoration: none;
+    color: #7bc74d;
+}
+
+.inputsReg p a:hover {
+    color: #44851d;
+}
+
 .inputsReg {
-    width: 600px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inputsReg label {
-    color: white;
+    color: black;
+    font-size: 12px;
 }
 
-.containerRegistro p {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.containerRegistro img {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contReg {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+.inputsReg input {
+    width: 100%;
+    padding: 6px 20px;
+    box-sizing: border-box;
+    border: 1px solid #7bc74d;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    margin-bottom: 15px;
     border-radius: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #393e46;
+}
+
+.inputsReg input:focus {
+    border: 1px solid #44851d;
+    border-radius: 20px;
+    background-color: #d6d6d6;
+}
+
+.imgRegistro {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imgRegistro img {
+    width: 200px;
+    display: inline-block;
 }
 
 .containerRegistro button {
     width: 100%;
     background-color: #7bc74d;
+    transition: .5s;
     color: #f2f2f2;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 0;
@@ -543,35 +599,33 @@ footer {
 
 /* LOGIN*/
 
-.containerLog {
+.containerImageLog {
     background-image: url(images/fondoLog.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    float: left;
+    width: 50%;
     height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerLog p {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.containerLog img {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 870px) {
+    .containerImage {
+        width: 30%;
+    }
+    .containerInputs {
+        width: 100%;
+    }
+    .contReg {
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     nav {
         height: 240px;
     }
@@ -631,6 +685,19 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    .containerImage {
+        display: none;
+    }
+    .containerInputs {
+        width: 100%;
+    }
+    .contReg {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .titulos {
         font-size: 20px;
     }
