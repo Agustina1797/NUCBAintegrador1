@@ -579,9 +579,10 @@ footer {
         width: 100%;
         margin-right: 0;
     }
-    li {
+    nav ul li {
         float: none;
         width: 100%;
+        padding: 0;
     }
     li a {
         display: block;
@@ -637,9 +638,10 @@ footer {
         width: 100%;
         margin-right: 0;
     }
-    li {
+    nav ul li {
         float: none;
         width: 100%;
+        padding: 0;
     }
     li a {
         display: block;
