@@ -1,43 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
 body {
     margin: 0;
     background-color: #f2f2f2;
-    scroll-behavior: smooth;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+nav {
     background-color: #393e46;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    height: 60px;
 }
 
-li {
-    float: left;
+nav ul {
+    float: right;
+    margin-right: 25px;
+    list-style: none;
 }
 
-li a {
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    position: relative;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    transition: 0.5s;
+    padding: 5px 0;
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-li a:hover {
+ul li:hover {
     background-color: #222831;
+}
+
+ul li a:hover {
     color: #7bc74d;
 }
 
-.logo {
+nav a.logo {
     width: 32px;
+    padding: 7px;
+    position: absolute;
+    top: 8px;
 }
 
 .portada {
-    background-image: url("images/port2.jpg");
+    background-image: url("images/portada2.jpg");
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -51,16 +72,6 @@ li a:hover {
     width: 500px;
     margin-left: 100px;
     position: relative;
-}
-
-.portada h4 {
-    font-family: 'Gayathri', sans-serif;
-    font-size: 30px;
-    font-weight: lighter;
-    position: absolute;
-    margin-left: 300px;
-    margin-top: 200px;
-    color: #222831;
 }
 
 #trabajos {
@@ -123,22 +134,24 @@ li a:hover {
 
 .nosotrosCont {
     display: flex;
-    justify-content: center;
 }
 
 .nosotrosText {
     width: 600px;
+    margin-left: 10%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .nosotrosText a {
     color: #7bc74d;
+    transition: 0.5s;
 }
 
 .areg {
     margin-top: 20px;
     padding: 8px;
     background-color: #7bc74d;
+    transition: 0.5s;
     color: #f2f2f2;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 0;
@@ -149,11 +162,17 @@ li a:hover {
     background-color: #44851d;
 }
 
+.nosotrosText a:hover {
+    color: #44851d;
+}
+
 .nosotrosImg {
-    width: 200px;
-    height: 200px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    margin-left: 40%;
 }
 
 .imgNos {
@@ -200,6 +219,7 @@ li a:hover {
     width: 80%;
     padding: 8px;
     background-color: #7bc74d;
+    transition: 0.5s;
     color: #f2f2f2;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 0;
@@ -300,6 +320,7 @@ li a:hover {
 
 .btn {
     background-color: #7bc74d;
+    transition: 0.5s;
     border: 0;
     border-radius: 50px;
     box-shadow: 0 5px 5px rgba(37, 37, 37, 0.2);
@@ -332,16 +353,12 @@ li a:hover {
     justify-content: center;
 }
 
-.redLink {
-    width: 50px;
-    height: 50px;
+.faceCont,
+.instaCont {
     float: left;
-    padding: 50px;
-}
-
-.imgRed {
-    width: 100%;
-    height: 100%;
+    color: #7bc74d;
+    font-size: 50px;
+    padding: 20px;
 }
 
 .formContacto {
@@ -446,14 +463,11 @@ footer {
     color: #7bc74d;
 }
 
-.footerRedes {
-    padding-top: 10px;
-    box-sizing: border-box;
-}
-
-.footerRedes img {
-    height: 20px;
-    margin-left: 10px;
+.faceFoot,
+.instaFoot {
+    padding: 10px;
+    font-size: 16px;
+    color: #7bc74d;
 }
 
 
@@ -557,9 +571,71 @@ footer {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 870px) {
+    nav {
+        height: 240px;
+    }
+    nav ul {
+        width: 100%;
+        margin-right: 0;
+    }
+    li {
+        float: none;
+        width: 100%;
+    }
+    li a {
+        display: block;
+    }
+    nav a.logo {
+        display: none;
+    }
+    #trabajos {
+        height: 100%;
+    }
+    #nosotros {
+        padding: 30px;
+    }
+    .nosotrosImg {
+        display: none;
+    }
+    .cardGaleria {
+        width: 100%;
+        float: left;
+    }
+    .column {
+        flex: 40%;
+        max-width: 40%;
+    }
+    .column3 {
+        display: none;
+    }
+    #contacto {
+        margin-top: 150px;
+        height: 150vh;
+        justify-content: center;
+    }
+    .contactoDatos {
+        width: 100%;
+        margin-left: 0;
+    }
+    .formContacto {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 60%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .titulos {
         font-size: 20px;
+    }
+    nav {
+        height: 240px;
+    }
+    nav ul {
+        width: 100%;
+        margin-right: 0;
     }
     li {
         float: none;
@@ -593,6 +669,9 @@ footer {
     #nosotros {
         padding: 30px;
     }
+    .areg {
+        margin-bottom: 10px;
+    }
     .nosotrosImg {
         display: none;
     }
@@ -617,10 +696,9 @@ footer {
         margin-top: 150px;
         height: 150vh;
     }
-    .redLink {
-        width: 40px;
-        height: 40px;
-        padding: 40px;
+    .faceCont,
+    .instaCont {
+        font-size: 40px;
     }
     .formContacto {
         width: 100%;
