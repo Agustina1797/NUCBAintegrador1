@@ -674,6 +674,9 @@ footer {
     #nosotros {
         padding: 30px;
     }
+    .nosotrosText {
+        margin-top: 10px;
+    }
     .areg {
         margin-bottom: 10px;
     }
